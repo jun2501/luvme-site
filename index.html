@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuvMe — Official Order Platform</title>
+  <meta name="description" content="LuvMe official order site · Fast checkout, WhatsApp & Telegram contact, full product showcase.">
+  <link rel="icon" href="assets/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --luvme-pink:#ff4ecb;
+      --luvme-purple:#a259e6;
+      --luvme-gold:#ffe082;
+    }
+    body {
+      background: radial-gradient(circle at 60% 15%, #ff4ecb25 0, transparent 60%), url('assets/bg.jpg') center/cover fixed no-repeat, #1a1024;
+      color: #fff; min-height: 100vh;
+    }
+    .glass {
+      backdrop-filter: blur(10px);
+      background: #ffffff1a;
+      border: 1px solid #ffffff2b;
+      border-radius: 20px;
+    }
+    .btn {
+      display:inline-block; padding:12px 18px; border-radius:12px;
+      background:linear-gradient(135deg,var(--luvme-pink),var(--luvme-purple));
+      font-weight:700; color:#fff;
+      transition:transform .2s;
+    }
+    .btn:hover { transform:scale(1.05); }
+    .carousel img { border-radius:20px; }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="p-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="LuvMe logo" class="w-12 h-12 rounded-lg">
+      <h1 class="text-2xl font-extrabold">LuvMe Official Order</h1>
+    </div>
+    <nav class="flex gap-3">
+      <a href="#products" class="btn">Products</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Carousel -->
+  <section class="max-w-5xl mx-auto p-6 glass">
+    <div class="carousel relative overflow-hidden rounded-2xl">
+      <div class="flex animate-[slide_18s_infinite]">
+        <img src="assets/preview.jpg" class="w-full object-cover" alt="Promo 1">
+        <img src="assets/ad-1.jpg" class="w-full object-cover" alt="Promo 2">
+        <img src="assets/ad-2.jpg" class="w-full object-cover" alt="Promo 3">
+        <img src="assets/ad-3.jpg" class="w-full object-cover" alt="Promo 4">
+      </div>
+    </div>
+  </section>
+
+  <style>
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
+  </style>
+
+  <!-- Products -->
+  <main class="max-w-5xl mx-auto p-6 space-y-6" id="products">
+    <h2 class="text-3xl font-bold mb-4 text-center">Featured Products</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Leman Mint -->
+      <div class="glass p-6 flex flex-col items-center text-center">
+        <img src="assets/lemanmint-black.jpg" alt="Leman Mint" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-bold mb-2">Leman Mint</h3>
+        <p class="opacity-80 mb-4">Men's exclusive supplement · Refreshing lemon mint tablets</p>
+        <a href="https://luvmemarketing.wasap.my/" target="_blank" class="btn">Order via WhatsApp</a>
+      </div>
+
+      <!-- LuvMe Drop -->
+      <div class="glass p-6 flex flex-col items-center text-center">
+        <img src="assets/luvme-drop.jpg" alt="LuvMe Drop" class="rounded-xl mb-4">
+        <h3 class="text-2xl font-bold mb-2">LuvMe Drop</h3>
+        <p class="opacity-80 mb-4">Romantic enhancer · Add excitement & passion to your moments</p>
+        <a href="https://luvmecs.wasap.my/" target="_blank" class="btn">Order via WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact -->
+  <section id="contact" class="glass p-6 max-w-5xl mx-auto mt-6">
+    <h3 class="text-2xl font-bold mb-4">Contact & Socials</h3>
+    <div class="flex flex-wrap gap-3">
+      <a href="https://t.me/Luvmeloveu" class="btn" target="_blank">Telegram</a>
+      <a href="https://web.facebook.com/luvme.official/" class="btn" target="_blank">Facebook Page</a>
+      <a href="https://luvmemarketing.wasap.my/" class="btn" target="_blank">WhatsApp 016-270 4980</a>
+      <a href="https://luvmecs.wasap.my/" class="btn" target="_blank">WhatsApp 017-208 9497</a>
+    </div>
+  </section>
+
+  <footer class="text-center p-6 opacity-70">
+    © <span id="year"></span> LuvMe Marketing · All rights reserved.
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
